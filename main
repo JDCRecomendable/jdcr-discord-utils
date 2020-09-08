@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2019 Jared Recomendable.
+# Licensed under the GNU GPL v3. This program is provided with
+# ABSOLUTELY NO WARRANTY, EXPRESS OR IMPLIED.
+
+import subprocess
+import sys
+import pathlib
+
+FILE_TO_RUN = "jdcr_discord_utils.py"
+CACHE_FILE = "cache"
+
+def do_shell_script(command, exit_to_shell=False):
+    """Run input command in bash shell.
+    Includes optional parameter exit_to_shell (default: False).
+    If exit_to_shell is True, the function call returns the subprocess.Popen
+    object used to run the command."""
+    if exit_to_shell:
+        return subprocess.Popen(["bash", "-c", command])
+    subprocess.run(["bash", "-c", command])
+
+def check_if_process_running():
+    """Check if a process is currently running."""
+    cache_file = pathlib.Path(CACHE_FILE)
+    if cache_file.is_file():
+        return True
+    return False
+
+def start():
+    """Start the process for this program."""
+    if not check_if_process_running():
+        # Start the process
+        process = do_shell_script("python3 {}".format(FILE_TO_RUN), True)
+        
+        # Save PID to enable stopping the process later
+        cache = open(CACHE_FILE, "w")
+        cache.write(str(process.pid))
+        cache.close()
+        
+        # Log result to shell
+        print("Started process with ID {}.".format(process.pid))
+    else:
+        print("Cannot start new process. A process is already running.")
+
+def get_status():
+    """Get the status of the process for this program."""
+    if check_if_process_running():
+        # Get the PID of the currently running process
+        cache = open(CACHE_FILE, "r")
+        pid = cache.read()
+        cache.close()
+        
+        # Log result to shell
+        print("Process running with ID {}.".format(pid))
+    else:
+        print("No process running.")
+
+def stop():
+    """Stop the process for this program."""
+    if check_if_process_running():
+        # Get the PID to stop the process and delete the cache file
+        cache = open(CACHE_FILE, "r")
+        pid = cache.read()
+        cache.close()
+        do_shell_script("rm {}".format(CACHE_FILE))
+        
+        # Stop the process
+        do_shell_script("kill {}".format(pid))
+        
+        # Log result to shell
+        print("Stopped process with ID {}.".format(pid))
+    else:
+        print("No process running.")
+
+def show_help():
+    """Show help documentation for this program."""
+    help_doc = '''Usage: main [options]
+
+Options:
+  start    start the process for this program
+  status   check if any process is running
+  stop     stop the process for this program'''
+    print(help_doc)
+
+if __name__ == "__main__":
+    if len(sys.argv) == 2:
+        if sys.argv[1] == "start":
+            start()
+        elif sys.argv[1] == "status":
+            get_status()
+        elif sys.argv[1] == "stop":
+            stop()
+        else:
+            show_help()
+    else:
+        show_help()
