@@ -1,0 +1,11 @@
+TOKEN=
+STATUS=
+CONSTANTS_FILE=data/constants.txt
+LENGTH_UNITS_FILE=data/units_length.txt
+AREA_UNITS_FILE=data/units_area.txt
+VOLUME_UNITS_FILE=data/units_volume.txt
+TIME_UNITS_FILE=data/units_time.txt
+SPEED_UNITS_FILE=data/units_speed.txt
+PRESSURE_UNITS_FILE=data/units_pressure.txt
+JOKE_API_URL=
+JOKE_API_HEADERS={Accept:text/plain}

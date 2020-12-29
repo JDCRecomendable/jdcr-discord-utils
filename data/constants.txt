@@ -1,0 +1,14 @@
+2 6.02214129 Avogadro Constant na
+2 1.3806488 Boltzmann Constant kb
+2 8.987551787 Coulomb Constant kc
+2 1.602176565 Elementary Charge e- e
+3 8.3144621 Molar Gas Constant r
+2 6.67384 Gravitational Constant ga
+2 9.10938291 Electron Mass me
+2 1.672621777 Proton Mass mp
+2 1.674927351 Neutron Mass mn
+2 1.256637061 Magnetic Constant u0
+2 8.854187817 Electric Constant e0
+2 6.62606957 Planck Constant h
+3 2.99792458 Speed of Light c
+4 1.660538921 Unified Atomic Mass Unit u

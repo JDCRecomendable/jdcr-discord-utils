@@ -1,0 +1,15 @@
+3 1 Metre per Second metre-per-second m/s
+3 0.016666666666666666 Metre per Minute metre-per-minute m/min
+3 0.0002777777777777778 Metre per Hour metre-per-hour m/hr m/h
+3 1000 Kilometres per Second kilometre-per-second km/s
+3 16.666666666666668 Kilometres per Minute kilometre-per-minute km/min
+3 0.2777777777777778 Kilometres per Hour kilometre-per-hour km/hr km/h kph kmph
+3 299792458 Speed of Light speed-of-light c
+3 0.30480000046573436 Foot per Second foot-per-second ft/s
+3 0.00508000000002032 Foot per Minute foot-per-minute ft/min
+3 8.466666666700534e-05 Foot per Hour foot-per-hour ft/hr ft/h
+3 1609.3440000064375 Mile per Second mile-per-second mi/s
+3 26.82240000010729 Mile per Minute mile-per-minute mi/min
+3 0.4470400000017882 Mile per Hour mile-per-hour mi/hr mi/h
+1 340 Mach
+1 0.5144444444444445 Knot

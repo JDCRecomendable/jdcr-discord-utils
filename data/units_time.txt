@@ -1,0 +1,11 @@
+1 1 Second sec s
+1 0.001 Millisecond ms
+1 0.000001 Microsecond us
+1 0.000000001 Nanosecond ns
+1 60 Minute min m
+1 3600 Hour hr h
+1 86400 Day d
+1 604800 Week wk w
+1 1209600 Fortnight
+1 31536000 Year yr y
+2 31622400 Leap Year leap-year lyr ly

@@ -1,0 +1,24 @@
+1 1 Pascal pa
+1 100 Hectopascal hpa
+1 1000 Kilopascal kpa
+1 1000000 Megapascal mpa
+1 1000000000 Gigapascal gpa
+2 101325 Standard Atmosphere standard-atmosphere atm
+2 98066.5 Technical Atmosphere technical-atmosphere
+1 100000 Bar
+1 100000000 Kilobar kbar
+1 100000000000 Megabar
+1 10000 Decibar dbar
+1 1000 Centibar cbar
+1 100 Millibar mbar
+3 133.322387415 Millimetre of Mercury millimetre-of-mercury mmhg
+3 1333.22387415 Centimetre of Mercury centimetre-of-mercury cmhg
+3 3386.3886403545457 Inch of Mercury inch-of-mercury inhg
+3 40636.66368425455 Foot of Mercury foot-of-mercury fthg
+3 9.80664857 Millimetre of Water millimetre-of-water mmh2o
+3 98.0664857 Centimetre of Water centimetre-of-water cmh2o
+3 9806.64857 Metre of Water metre-of-water mh2o
+3 249.08887367899635 Inch of Water inch-of-water inh2o
+3 2989.066484147956 Foot of Water foot-of-water fth2o
+4 6894.75729 Pound per Square Inch pound-per-square-inch psi
+1 1333.2236842105262 Torr

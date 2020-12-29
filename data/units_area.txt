@@ -1,0 +1,20 @@
+2 1 Square Metre square-metre m^2
+2 1000000 Square Kilometre square-kilometre km^2
+2 0.01 Square Decimetre square-decimetre dm^2
+2 0.0001 Square Centimetre square-centimetre cm^2
+2 0.000001 Square Millimetre square-millimetre mm^2
+2 0.000000000001 Square Micrometre square-micrometre um^2
+1 100 Are
+1 1000 Stremma
+1 10000 Hectare
+1 4000000 Tetrad
+1 100000000 Hectad
+1 10000000000 Myriad
+2 2589988.1103360006 Square Mile square-mile mi^2
+2 0.8361273600000002 Square Yard square-yard yd^2
+2 0.09290304000000002 Square Foot square-foot ft^2
+2 0.0006451600000000002 Square Inch square-inch in^2
+1 4046.856422400001 Acre
+1 1011.7141056000003 Rood
+1 2589988.1103360006 Section
+2 93239571.97209603 Survey Township survey-township

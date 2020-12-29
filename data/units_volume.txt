@@ -1,0 +1,15 @@
+2 1 Cubic Metre cubic-metre m^3
+2 1e-06 Cubic Centimetre cubic-centimetre cm^3 cc
+2 1e-09 Cubic Millimetre cubic-millimetre mm^3
+2 0.7645548579840014 Cubic Yard cubic-yard yd^3
+2 0.02831684659200005 Cubic Foot cubic-foot ft^3
+2 1.638706400000003e-05 Cubic Inch cubic-inch in^3
+1 0.001 l
+1 0.000001 Millilitre ml
+1 0.1589872949280003 Barrel
+1 0.004546089999999996 Gallon
+1 0.001136522499999999 Quart
+1 0.0005682612499999995 Pint
+1 4226.75283773038 Cup
+1 264.17205235814873 Tablespoon
+1 88.05735078604958 Teaspoon
