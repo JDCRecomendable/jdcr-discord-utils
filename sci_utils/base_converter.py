@@ -13,13 +13,16 @@ class BaseConverter:
 
     def convert(self, val, fr_base, to_base):
         """Convert value from one base to another."""
-        if 1 < fr_base < 31 and 1 < to_base < 31 and val > -1:
+        val = str(val)
+        fr_base = int(fr_base)
+        to_base = int(to_base)
+        if 1 < fr_base < 31 and 1 < to_base < 31 and val.isalnum():
             return self.from_dec(self.to_dec(val, fr_base), to_base)
         return -1
 
     def to_dec(self, val, base):
         """Convert value from specified base to decimal."""
-        if 1 < base < 31 and val > -1:
+        if 1 < base < 31 and val.isalnum():
             return int(val, base)
         return -1
 
