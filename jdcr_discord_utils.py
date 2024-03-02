@@ -6,7 +6,7 @@
 ## INITIALISATION
 # Import Libraries
 from discord.ext import commands
-from discord import Game
+from discord import Game, Intents
 import asyncio
 import requests
 
@@ -72,7 +72,8 @@ random_number = RandomNumber()
 
 ## MAIN APP ACTIVITY
 # Create Discord Client
-bot = commands.Bot(command_prefix="$")
+intents = Intents.all()
+bot = commands.Bot(command_prefix="$", intents=intents)
 bot.remove_command("help")
 
 
