@@ -16,6 +16,8 @@ class RandomJoker:
 
     def get_joke(self):
         joke = get(self.joke_api_url, headers=self.joke_api_headers)
+        while "â" in joke.text:
+            joke = get(self.joke_api_url, headers=self.joke_api_headers)
         return joke.text
 
 
