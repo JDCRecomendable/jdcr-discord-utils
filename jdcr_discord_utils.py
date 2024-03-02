@@ -5,7 +5,6 @@
 
 ## INITIALISATION
 # Import Libraries
-from datetime import datetime
 from discord.ext import commands
 from discord import Game
 import asyncio
@@ -13,12 +12,14 @@ import requests
 
 from data_reader import ConfigReader, DataReader
 from random_utils import RandomJoker, RandomNumber
+from uoa_grad import UoAGraduationUtility
 from sci_utils.base_converter import BaseConverter
 from sci_utils.constants import Constants
 from sci_utils.unit_converter import UnitConverter
 from docs import get_main_help_usage, get_base_converter_help_usage
 from docs import get_constants_help_usage, get_unit_converter_help_usage
 from docs import get_random_utils_help_usage, list_constants, list_units
+from docs import get_grad_utils_help_usage
 
 
 # Initialise Config and Readers
@@ -46,6 +47,10 @@ constants = Constants(
     sci_utils_readers[0].retrieve_data_values(),
     sci_utils_readers[0].retrieve_data_aliases()
 )
+
+
+# Initialise UoA Grad Utils
+grad_utils = UoAGraduationUtility()
 
 
 # Initialise Unit Converter
@@ -114,6 +119,8 @@ async def help(ctx, category="", sub_category=""):
             ))
         else:
             await ctx.send(get_unit_converter_help_usage())
+    elif category == "grad":
+        await ctx.send(get_grad_utils_help_usage())
     elif category == "random":
         await ctx.send(get_random_utils_help_usage())
     else:
@@ -162,6 +169,18 @@ async def convert(ctx, category="invalid", orig_value=0, from_unit="m", to_keywo
         await ctx.send(value)
     except:
         await ctx.send(get_unit_converter_help_usage())
+
+@bot.command()
+async def grad(ctx, input_type, *, value=""):
+    input_type = input_type.lower()
+    if input_type == "honours" or input_type == "honors":
+        await ctx.send(grad_utils.get_honours_level_answer_string(value))
+    elif input_type == "gpa":
+        await ctx.send(grad_utils.get_gpa_answer_string(value))
+    else:
+        await ctx.send(
+            get_grad_utils_help_usage()
+        )
 
 @bot.command()
 async def random(ctx, category=""):

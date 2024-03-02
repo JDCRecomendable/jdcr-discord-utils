@@ -34,6 +34,11 @@ def get_unit_converter_help_usage():
     string += DOC_UNIT_CONVERTER_USAGE
     return "```\n{}```".format(string)
 
+def get_grad_utils_help_usage():
+    string = DOC_STD_TITLE
+    string += DOC_GRAD_UTILS_USAGE
+    return "```\n{}```".format(string)
+
 def get_random_utils_help_usage():
     string = DOC_STD_TITLE
     string += DOC_RANDOM_UTILS_USAGE

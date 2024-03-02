@@ -24,6 +24,7 @@ COMMANDS:
   base <params>     convert integers from one base to another
   constant <param>  display constant value and unit
   convert <params>  convert units
+  grad <params>     get information about graduation
   random <option>   display a random value from the desired category
 
 BASE PARAMETERS:
@@ -40,6 +41,11 @@ CONVERT PARAMETERS:
   $convert  <category>  <orig_value>  <from_unit>  to  <to_unit>
   E.g. `$convert length 25 metre to furlong`
   More details available by calling `$help convert`.
+
+GRAD PARAMETERS:
+  $grad  <input_type>  <value>
+  E.g. `$grad gpa 9.0`
+  More details available by calling `$help grad`.
 
 RANDOM PARAMETER:
   $random  <category>
@@ -102,6 +108,21 @@ CATEGORIES:
 
 
 DOC_UNITS_LIST = "LIST OF {} UNITS:"
+
+
+DOC_GRAD_UTILS_USAGE = """
+USAGE: $grad <input_type> <value>
+
+EXAMPLES:
+  $grad honours first class
+  $grad honours 1st class
+  $grad honours second class, first division
+  $grad honours 2nd class division 1
+  $grad honours class 2 2nd division
+  $grad honours class 2nd
+  $grad gpa 7.0
+  $grad gpa 8
+"""
 
 
 DOC_RANDOM_UTILS_USAGE = """
