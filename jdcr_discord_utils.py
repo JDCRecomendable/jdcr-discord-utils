@@ -127,7 +127,7 @@ async def help(ctx, category="", sub_category=""):
         await ctx.send(get_main_help_usage())
 
 @bot.command()
-async def base(ctx, orig_value=0, from_base="b0", to_keyword="to", to_base="b0"):
+async def base(ctx, orig_value="0", from_base="b0", to_keyword="to", to_base="b0"):
     try:
         from_b = from_base[1:]
         to_b = to_base[1:]
