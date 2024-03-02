@@ -8,4 +8,4 @@ TIME_UNITS_FILE=data/units_time.txt
 SPEED_UNITS_FILE=data/units_speed.txt
 PRESSURE_UNITS_FILE=data/units_pressure.txt
 JOKE_API_URL=
-JOKE_API_HEADERS={Accept:text/plain}
+JOKE_API_HEADERS=
